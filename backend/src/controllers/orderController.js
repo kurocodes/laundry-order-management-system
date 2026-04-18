@@ -120,6 +120,7 @@ exports.getOrders = async (req, res, next) => {
       query.$or = [
         { customerName: { $regex: search, $options: "i" } },
         { phone: { $regex: search, $options: "i" } },
+        { "items.type": { $regex: search, $options: "i" } },
       ];
     }
 
