@@ -125,6 +125,9 @@ export default function OrdersList({ refreshTrigger, onOrderUpdated }) {
                 Phone
               </th>
               <th className="font-label px-6 py-4 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">
+                Est. Delivery
+              </th>
+              <th className="font-label px-6 py-4 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">
                 Status
               </th>
               <th className="font-label px-6 py-4 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant text-right">
@@ -139,7 +142,7 @@ export default function OrdersList({ refreshTrigger, onOrderUpdated }) {
             {loading && (
               <tr>
                 <td
-                  colSpan="6"
+                  colSpan="7"
                   className="p-8 text-center text-on-surface-variant text-sm font-medium"
                 >
                   Loading orders...
@@ -149,7 +152,7 @@ export default function OrdersList({ refreshTrigger, onOrderUpdated }) {
             {!loading && orders.length === 0 && (
               <tr>
                 <td
-                  colSpan="6"
+                  colSpan="7"
                   className="p-8 text-center text-on-surface-variant text-sm font-medium"
                 >
                   No orders found.

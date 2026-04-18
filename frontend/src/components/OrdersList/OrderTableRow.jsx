@@ -28,6 +28,11 @@ export default function OrderTableRow({ order, onStatusUpdate }) {
       <td className="px-6 py-4 text-on-surface-variant text-sm">
         {order.phone}
       </td>
+      <td className="px-6 py-4 text-on-surface text-sm font-medium">
+        {order.estimatedDeliveryDate 
+          ? new Date(order.estimatedDeliveryDate).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' }) 
+          : "N/A"}
+      </td>
       <td className="px-6 py-4">
         <select
           value={order.status}
